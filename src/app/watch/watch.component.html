@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <span>{{videoInfo.snippet.title}}</span>
+</mat-toolbar>
+<button mat-raised-button color="primary" (click)="back()">Voltar</button>
+<iframe id="al-video" type="text/html" width="640" height="360" [src]="getUrl()">
+
+</iframe>
+<div>
+    {{videoInfo.statistics.viewCount}}
+</div>
+<div>
+    {{videoInfo.snippet.description}}
+</div>
