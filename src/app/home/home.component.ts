@@ -1,7 +1,8 @@
-import { YoutubeService } from './../youtube.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AnonymousSubject } from 'rxjs/Subject';
+
+import { YoutubeService } from '../services/youtube.service';
 
 @Component({
   selector: 'app-home',

@@ -1,8 +1,9 @@
-import { YoutubeService } from './../youtube.service';
 import { Location } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+
+import { YoutubeService } from '../services/youtube.service';
 
 @Component({
   selector: 'app-watch',
