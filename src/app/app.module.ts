@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { WatchComponent } from './watch/watch.component';
 import { HomeComponent } from './home/home.component';
 import { YoutubeService } from './services/youtube.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'watch', component: WatchComponent },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
       { enableTracing: true } 
     ),
     BrowserModule,
+    HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
