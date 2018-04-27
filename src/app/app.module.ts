@@ -51,4 +51,6 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent],
   entryComponents:[DialogComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
