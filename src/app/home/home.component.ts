@@ -1,3 +1,4 @@
+import { AppService } from './../base/services/app.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AnonymousSubject } from 'rxjs/Subject';
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit {
   firstSearch: boolean = false;
   term: string;
 
-  constructor(public dialog: MatDialog, private youtubeService: YoutubeService) { }
+  constructor(public dialog: MatDialog, private youtubeService: YoutubeService, private appService: AppService) { }
 
   ngOnInit() {
 
@@ -39,6 +40,10 @@ export class HomeComponent implements OnInit {
 
   search(){
     console.log(this.term);
+    if (!this.term){
+      this.appService.showMessage('Erro', 'Você precisa definir o termo da pesquisa', 1);
+      return;
+    }
     this.youtubeService.search(this.term)
     .subscribe(
       data => {
@@ -64,7 +69,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  prepareResults(data:any){
+  private prepareResults(data:any){
 
     this.result = data;
         this.firstSearch = true;
