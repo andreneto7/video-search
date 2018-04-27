@@ -1,8 +1,10 @@
-import { MatDialogModule, MatButtonModule } from '@angular/material';
-import { AppService } from './services/app.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { MatDialogModule, MatButtonModule } from '@angular/material';
+
 import { DialogComponent } from './dialog/dialog.component';
+import { AppService } from './services/app.service';
 
 @NgModule({
   imports: [
