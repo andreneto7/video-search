@@ -139,11 +139,14 @@ mat-card.example-card.mat-card.ng-star-inserted {
     width: calc(100% - 100px);
 }
 
-.al-element-visible{
+.al-visible{
     display: block!important;
     animation: showResults 3s;
 }
 
+.al-invisible{
+    display: none;
+}
 #al-container-result {
     display: none;
 }
