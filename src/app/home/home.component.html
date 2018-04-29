@@ -14,7 +14,8 @@
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
-<div id="al-container-result">
+{{hasItens2()}}
+<div id="al-container-result" [ngClass]="{'al-element-visible': hasItens()}">
     <mat-card *ngFor="let item of items">
         <mat-card-header>
             <mat-card-title>{{item.snippet.title}}</mat-card-title>

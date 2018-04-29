@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
       this.items = JSON.parse(items);
       this.firstSearch = true;
     }
+
   }
 
   search(){
@@ -65,10 +66,6 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  previous(){
-
-  }
-
   private prepareResults(data:any){
 
     this.result = data;
@@ -85,5 +82,10 @@ export class HomeComponent implements OnInit {
         localStorage.setItem('searchResult', JSON.stringify(data));
 
   }
+
+  hasItens(){
+    return this.items.length > 0;
+  }
+  
 
 }
