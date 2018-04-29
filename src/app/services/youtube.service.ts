@@ -15,7 +15,7 @@ export class YoutubeService {
   }
 
   search(term: string){
-    return this.http.get('https://www.googleapis.com/youtube/v3/search?part=id,snippet&key=' + apiKey + '&q=' + term);
+    return this.http.get('https://www.googleapis.com/youtube/v3/search?part=id,snippet&type=video&key=' + apiKey + '&q=' + term);
   }
 
   searchWithPage(term:string, pageId:string){
