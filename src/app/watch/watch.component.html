@@ -1,13 +1,21 @@
-<mat-toolbar>
-    <span>{{videoInfo.snippet.title}}</span>
-</mat-toolbar>
-<button mat-raised-button color="primary" (click)="back()">Voltar</button>
-<iframe id="al-video" type="text/html" width="640" height="360" [src]="getUrl()">
-
-</iframe>
-<div>
-    {{videoInfo.statistics.viewCount}}
-</div>
-<div>
-    {{videoInfo.snippet.description}}
-</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <span>{{videoInfo.snippet.title}}</span>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <iframe matLine id="al-video" type="text/html" width="640" height="360" [src]="getUrl()"></iframe>
+    <mat-card-content>
+        <p>Visualizações: {{videoInfo.statistics.viewCount}}</p>
+        <mat-divider></mat-divider>
+        <p></p>
+        <p>
+            {{videoInfo.snippet.description}}
+        </p>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="back()">Voltar</button>
+    </mat-card-actions>
+</mat-card>

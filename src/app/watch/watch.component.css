@@ -1,4 +1,5 @@
-#al-video {
-    margin: auto;
+#al-video{
+    margin-top: 20px;
     width: 100%;
+    box-sizing: border-box;
 }

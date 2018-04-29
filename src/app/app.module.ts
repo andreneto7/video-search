@@ -5,7 +5,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatSidenavModule, MatToolbarModule, MatCardModule, MatCardTitle, MatButtonModule, MatDialogModule, MatInputModule } from '@angular/material';
+import { MatSidenavModule, MatToolbarModule, MatCardModule, MatCardTitle, MatButtonModule, MatDialogModule, MatInputModule, MatListModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { WatchComponent } from './watch/watch.component';
@@ -45,6 +45,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatInputModule,
     BaseModule,
+    MatListModule,
     BrowserAnimationsModule
   ],
   providers: [YoutubeService, AppService],

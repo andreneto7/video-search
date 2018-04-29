@@ -11,7 +11,7 @@ mat-card.example-card.mat-card.ng-star-inserted {
     margin: 8px;
 }
 
-.al-searched {
+.al-search-executed {
     animation-duration: 1s;
     animation-name: toTop;
     top: 0px! important;
@@ -39,13 +39,12 @@ mat-card.example-card.mat-card.ng-star-inserted {
     display: none!important;
 }
 
-.al-inital[_ngcontent-c1] {
+.al-inital {
     height: 250px;
     top: 100px;
     padding-top: 35px;
     position: relative;
     background-color: white;
-    width: 500PX;
     MARGIN: AUTO;
 }
 

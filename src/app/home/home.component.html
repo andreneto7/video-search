@@ -15,20 +15,22 @@
     </mat-toolbar-row>
 </mat-toolbar>
 <div id="al-container-result">
-        <mat-card *ngFor="let item of items">
-            <mat-card-header>
-                <mat-card-title>{{item.snippet.title}}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-md-image [src]="item.snippet.thumbnails.high.url" [alt]="item.snippet.title">
-            <mat-card-content>
-                <p>
+    <mat-card *ngFor="let item of items">
+        <mat-card-header>
+            <mat-card-title>{{item.snippet.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-md-image [src]="item.snippet.thumbnails.high.url" [alt]="item.snippet.title">
+        <mat-card-content>
+            <div>
+            </div>
+            <div>
                     {{item.snippet.description}}
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button [routerLink]="['./watch']" [queryParams]="{id: item.id.videoId}" mat-raised-button>VER</button>
-            </mat-card-actions>
-        </mat-card>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button [routerLink]="['./watch']" [queryParams]="{id: item.id.videoId}" mat-raised-button>VER</button>
+        </mat-card-actions>
+    </mat-card>
 </div>
 <button [hidden]="result.items == null" mat-button color="primary" (click)="nextPage(result.nextPageToken)">Mais</button>
 <router-outlet></router-outlet>
